@@ -30,6 +30,7 @@ function createApp(options = {}) {
   const now = options.now ?? (() => new Date());
   const createRequestId = options.createRequestId ?? randomUUID;
 
+  console.log("Starting server with the following options:");
   return http.createServer((request, response) => {
     const requestId = createRequestId();
     const url = new URL(request.url, "http://localhost");
