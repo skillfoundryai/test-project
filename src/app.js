@@ -30,7 +30,7 @@ function createApp(options = {}) {
   const now = options.now ?? (() => new Date());
   const createRequestId = options.createRequestId ?? randomUUID;
 
-  console.log("Starting server with the following options:");
+  //console.log("Starting server with the following options:");
   console.log(options);
   return http.createServer((request, response) => {
     const requestId = createRequestId();
